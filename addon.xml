@@ -13,5 +13,6 @@
     <summary lang="es_ES">Taox Wizard</summary>
     <description lang="es_ES">Instalador de builds para Kodi.</description>
     <platform>all</platform>
+    <source>https://github.com/taoxtrece/plugin.program.taoxwizard</source>
   </extension>
 </addon>
