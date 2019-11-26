@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Build">
+		<setting type="lsep" label="Build Actual:"/>
+		<setting id="buildname" type="text" label="Build Instalado: " enable="false" default=""/>
+		<setting id="buildversion" type="text" label="Versión Instalada: " enable="false" default=""/>
+		<setting id="buildtheme" type="text" label="Tema Actual: " enable="false" default=""/>
+		<setting id="latestversion" type="text" label="Última Versión: " enable="false" default=""/>
+		<setting id="lastbuildcheck" type="text" label="Comprobar próxima actualización: " enable="false" default=""/>
+		<setting id="disableupdate" type="bool" label="Deshabilitar notificación de actualización" default="false"/>
+		<setting id="installmethod" type="enum" label="¿Que método prefiere despúes de instalar?" values="Always Ask|Reload Profile|Force Close" default="2" enable="!eq(-4,false)"/>
+		<setting type="lsep" label="Show Builds:"/>
+		<setting id="show16" type="bool" label="Mostrar Jarvis(v16.0) Builds" default="true"/>
+		<setting id="show17" type="bool" label="Mostrar Krypton(v17.0) Builds" default="true"/>
+		<setting id="show18" type="bool" label="Mostrar Leia(v18.0) Builds" default="true"/>
+		<setting id="seperate" type="bool" label="No separar por versión" default="false"/>
+		<setting id="installed" type="bool" label="Build Instalado" visible="false" default="false" />
+		<setting id="extract" type="text" label="Extraer Build %" visible="false" default="100" />
+		<setting id="errors" type="text" label="Extraer Error" visible="false" default="" />
+		<setting id="defaultskin" type="text" label="Skin por defecto: " enable="false" default="" visible="false"/>
+		<setting id="defaultskinname" type="text" label="Nombre de skin por defecto: " enable="false" default="" visible="false"/>
+		<setting id="defaultskinignore" type="bool" label="Ignorar compración skin por defecto:" enable="false" default="false" visible="false"/>
+		<setting id="default.enablerssfeeds" type="text" label="Por defecto lookandfeel.enablerssfeeds:" enable="false" default="" visible="false"/>
+		<setting id="default.font" type="text" label="Por defecto lookandfeel.font:" enable="false" default="" visible="false"/>
+		<setting id="default.rssedit" type="text" label="Por defecto lookandfeel.rssedit:" enable="false" default="" visible="false"/>
+		<setting id="default.skincolors" type="text" label="Por defecto lookandfeel.skincolors:" enable="false" default="" visible="false"/>
+		<setting id="default.skintheme" type="text" label="Por defecto lookandfeel.skintheme:" enable="false" default="" visible="false"/>
+		<setting id="default.skinzoom" type="text" label="Por defecto lookandfeel.skinzoom:" enable="false" default="" visible="false"/>
+		<setting id="default.soundskin" type="text" label="Por defecto lookandfeel.soundskin:" enable="false" default="" visible="false"/>
+		<setting id="default.startupwindow" type="text" label="Por defecto lookandfeel.startupwindow:" enable="false" default="" visible="false"/>
+		<setting id="default.stereostrength" type="text" label="Por defecto lookandfeel.stereostrength:" enable="false" default="" visible="false"/>
+		<setting id="default.addonupdate" type="text" label="Por defecto general.addonupdate:" enable="false" default="" visible="false"/>
+		<setting id="pvrclient" type="text" label="Habilitar PVR:" enable="false" default="" visible="false"/>
+	</category>
+
+	<category label="Mantenimiento">
+		<setting type="lsep" label="Localización del Backup: "/>
+		<setting id="path" type="folder" label="Elegir localización almacenamiento del Backup" default=""/>
+		<setting id="rompath" type="folder" label="Elegir localización para extraer ROMs" default=""/>
+		<setting type="lsep" label="Opciones de Mantenimiento: "/>
+		<setting id="clearcache" type="bool" label="Limpiar caché al inicio" default="true"/>
+		<setting type="lsep" label="Límite carpeta Packages" />
+		<setting id="filesize_alert" type="slider" label="Tamaño máximo carpeta MB" default="200" range="25,25,500" option="int" />
+		<setting type="lsep" label="Límite carpeta Thumbnails" />
+		<setting id="filesizethumb_alert" type="slider" label="Tamaño máximo carpeta MB" default="500" range="100,50,1500" option="int" />
+		<setting type="lsep" label="Subir Log: "/>
+		<setting id="email" type="text" label="Dirección E-Mail" />
+		<setting id="oldlog" type="bool" label="Incluír Kodi.Old.Log" default="false"/>
+		<setting id="wizlog" type="bool" label="Incluír Wizard Logs" default="false"/>
+		<setting id="crashlog" type="bool" label="Incluír Kodi Crash Logs" default="false"/>
+		<setting type="lsep" label="Limpiando Video Cache:"/>
+		<setting id="includevideo" type="bool" label="Incluír Video Addons en Limpiar Caché: " default="true"/>
+		<setting id="includeall" type="bool" label="Incluír Todos los Addons: " default="true" enable="!eq(-1,false)" visible="!eq(-1,false)"/>
+		<setting id="includeelementum" type="bool" label="Incluír Elementum Cache DB: " default="true" enable="!eq(-2,false)" visible="!eq(-2,false)"/>
+		<setting id="includealfa" type="bool" label="Incluír Alfa Cache: " default="true" enable="!eq(-3,false)" visible="!eq(-3,false)"/>
+		<setting id="includebalandro" type="bool" label="Incluír Balandro Cache: " default="true" enable="!eq(-4,false)" visible="!eq(-4,false)"/>		
+
+
+	</category>
+
+	<category label="Instalación">
+		<setting type="lsep" label="Mantener ajustes cuando se instala build:"/>
+		<setting id="keepfavourites" type="bool" label="Mantener Mis Favoritos" default="false"/>
+		<setting id="favouriteslastsave" type="text" label="Guardado Favoritos por última vez: " enable="false" default=""/>
+		<setting id="keepsources" type="bool" label="Mantener Mis Fuentes" default="false"/>
+		<setting id="keepprofiles" type="bool" label="Mantener Mis Perfiles" default="false"/>
+		<setting id="keepadvanced" type="bool" label="Mantener Mi AdvancedSettings.xml" default="false"/>
+		<setting id="keeprepos" type="bool" label="Mantener Repositorios Instalados" default="false"/>
+		<setting id="keepsuper" type="bool" label="Mantener Super Favoritos" default="false"/>
+		<setting id="keepwhitelist" type="bool" label="Mantener Mi Lista Blanca de Addons" default="false"/>
+		<setting type="lsep" label="Soporte Wizard de terceros:"/>
+		<setting id="enable3rd" type="bool" label="Habilitar Wizards de terceros" default="false"/>
+		<setting id="wizard1name" type="text" label="Wizard 1 Nombre: " enable="true" visible="!eq(-1,false)" default=""/>
+		<setting id="wizard1url" type="text" label="Wizard 1 URL: " enable="true" visible="!eq(-2,false)" default=""/>
+		<setting id="wizard2name" type="text" label="Wizard 2 Nombre: " enable="true" visible="!eq(-3,false)" default=""/>
+		<setting id="wizard2url" type="text" label="Wizard 2 URL: " enable="true" visible="!eq(-4,false)" default=""/>
+		<setting id="wizard3name" type="text" label="Wizard 3 Nombre: " enable="true" visible="!eq(-5,false)" default=""/>
+		<setting id="wizard3url" type="text" label="Wizard 3 URL: " enable="true" visible="!eq(-6,false)" default=""/>
+	</category>
+
+	<category label="Trakt">
+		<setting type="lsep" label="Guardar Trakt Data:"/>
+		<setting id="keeptrakt" type="bool" label="Mantener Mi Trakt Data" default="false"/>
+		<setting id="exodus" type="text" label="Exodus: " enable="false" default=""/>
+		<setting id="metalliq" type="text" label="Metalliq: " enable="false" default=""/>
+		<setting id="meta" type="text" label="Meta: " enable="false" default=""/>
+		<setting id="salts" type="text" label="Salts: " enable="false" default=""/>
+		<setting id="saltshd" type="text" label="Salts HD: " enable="false" default=""/>
+		<setting id="velocity" type="text" label="Velocity: " enable="false" default=""/>
+		<setting id="royalwe" type="text" label="The Royal We: " enable="false" default=""/>
+		<setting id="velocitykids" type="text" label="Velocity Kids: " enable="false" default=""/>
+		<setting id="specto" type="text" label="Specto: " enable="false" default=""/>
+		<setting id="trakt" type="text" label="Trakt: " enable="false" default=""/>
+		<setting id="traktlastsave" type="text" label="Última vez guardado Trakt: " enable="false" default=""/>
+	</category>
+
+	<category label="Miscelánea">
+		<setting id="developer" type="bool" label="Mostrar menú del desarrollador: " enable="true" default=""/>
+		<setting id="show15" type="bool" label="Mostrar Test Builds" default="false"/>
+		<setting id="adult" type="bool" label="Mostrar Addons de adultos: " enable="true" default="false"/>
+		<setting id="auto-view" type="bool" label="Habilitar Auto View" default="true"/>
+		<setting id="viewType" type="number" label="Tipo de vista" default="50" enable="!eq(-1,false)"/>
+		<setting type="lsep" label="Ventana de notificación al inicio:"/>
+		<setting id="notify" type="bool" label="Deshabilitar notificación al inicio" />
+		<setting id="noteid" type="text" label="Última notificación" visible="false" />
+		<setting id="notedismiss" type="bool" label="Entendido o Recordármelo" visible="false" />
+		<setting id="ogwiz" type="bool" label="Diseño original del Wizard" default="false" />
+	</category>
+
+	<category label="Registro">
+		<setting type="lsep" label="Registro de eventos en el Wizard:"/>
+		<setting id="addon_debug" type="bool" label="Habilitar Addon Debugging: " enable="true" default="true"/>
+		<setting type="lsep" visible="!eq(-1,false)" label="Level 0: Sin Registro"/>
+		<setting type="lsep" visible="!eq(-2,false)" label="Level 1: Registro Normal"/>
+		<setting type="lsep" visible="!eq(-3,false)" label="Level 2: Registro Completo"/>
+		<setting id="debuglevel" type="enum" label="¿Qué nivel le gustaría que el asistente registre?" visible="!eq(-4,false)" values="Level 0|Level 1|Level 2" default="2"/>
+		<setting id="wizardlog" type="bool" label="Habilitar la escritura de Wizard.Log: " visible="!eq(-5,false)" enable="true" default="true"/>
+		<setting id="autocleanwiz" type="bool" label="Limpiar automáticamente Wizard.Log: " visible="!eq(-6,false)" enable="!eq(-1,false)" default="true"/>
+		<setting id="wizlogcleanby" type="enum" label="¿Cómo le gustaría limpiar el asistente de registro?" visible="!eq(-1,false)" values="By Days|By Size|By Lines" default="1"/>
+		<setting id="wizlogcleandays" type="enum" label="¿Cuantos días mantener el wizard.log?" visible="eq(-1,0)+!eq(-2,false)" values="1 Day|2 Days|3 Days|7 Days" default="2"/>
+		<setting id="wizlogcleansize" type="enum" label="¿Tamaño máximo del archivo wizard.log?" visible="eq(-2,1)+!eq(-3,false)" values="100 KB|200 KB|300 KB|400 KB|500 KB|1 MB" default="1"/>
+		<setting id="wizlogcleanlines" type="enum" label="¿Mantener cuántas líneas de wizard.log?" visible="eq(-3,2)+!eq(-4,false)" values="100|200|300|400|500" default="2"/>
+		<setting id="nextcleandate" type="text" label="Próximo limpiado del Wizard Log:" visible="false" default=""/>
+	</category>
+</settings>
